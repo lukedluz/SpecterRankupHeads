@@ -1,0 +1,14 @@
+main: PombaHeads.Main
+author: Alison
+version: 1.0
+name: PombaHeads
+softdepend: [MVdWPlaceholderAPI, AtlasSpawnerV2, OpeNChat, PombaEconomy, Vault]
+commands:
+  ranks:
+  rankup:
+  prestigio:
+  prestigios:
+  booster:
+  darbooster:
+  stopbooster:
+  givehead:

@@ -1,0 +1,121 @@
+#################################################
+#                   PombaHeads                  #
+#               Plugin by: Alison               #
+#      Plugin de uso exclusivo PombaNetwork     #
+#            © Copyright PombaNetwork           #
+#################################################
+
+#Sumário
+#%p - Player
+#%nextrank - próximo rank do player
+#%nextprestigio - próximo prestigio do player
+#%rank - rank do player
+#%prestigio - prestigio do player
+
+#OpeNChat
+#pomba_rank - Prefix do rank do player
+#pomba_prestigio - Prestigio do player
+
+#MvdwPlaceHolder
+#pombarank - Prefix do rank do player
+#pombanextrank - Prefix do próximo rank do player
+#pombaprestigio - Prestigio do player
+#pombaprogresso - Progresso do player
+#pombaheads - Heads do player
+#pombabooster - Booster do player
+
+#Configure os ranks
+Ranks:
+  Inicial: #Importante deixar esse rank como "Inicial"
+    Head: 'ZOMBIE'
+    Quantidade: '10.0'
+    Prefix: '&7[Zombie]'
+    PrecoUp: '10'
+    ProxRank: 'Inicial2'
+    Comandos:
+     - 'teste a'
+
+  Inicial2:
+    Head: 'SKELETON'
+    Quantidade: '10.0'
+    Prefix: '&7[Spider]'
+    PrecoUp: '10'
+    ProxRank: 'Inicial3'
+    Comandos:
+     - 'teste b'
+
+  Inicial3:
+    Head: 'CAVE_SPIDER'
+    Quantidade: '10.0'
+    Prefix: '&7[Blaze]'
+    PrecoUp: '10'
+    ProxRank: 'Nenhum'
+    Comandos:
+     - 'teste c'
+
+#Configure os Prestigios
+Prestigios:
+  1:
+    Porcentagem: '0.25'
+    Comandos:
+     - 'teste %p'
+  
+  2:
+    Porcentagem: '0.50'
+    Comandos:
+     - 'teste %p'
+
+#Configure os menus
+Gui:
+  Rankup:
+    Nome: '&aConfirme seu rankup'
+    Tamanho: '9'
+    Itens:
+      Sim:
+        Nome: '&aConfirmar Rankup'
+        Slot: '1'
+        Lore:
+         - '&aTeste'
+      Nao:
+        Nome: '&cCancelar Rankup'
+        Slot: '2'
+        Lore:
+          - '&aTeste'
+      Info:
+        Nome: '&aInformações'
+        Slot: '3'
+        Lore:
+         - '&a%nextrank %rank'
+  
+  Prestigio:
+    Nome: '&aConfirme seu prestigio'
+    Tamanho: '9'
+    Itens:
+      Sim:
+        Nome: '&aConfirmar Prestigio'
+        Slot: '1'
+        Lore:
+         - '&aTeste'
+      Nao:
+        Nome: '&cCancelar Prestigio'
+        Slot: '2'
+        Lore:
+         - '&aTeste'
+      Info:
+        Nome: '&aInformações'
+        Slot: '3'
+        Lore:
+         - '&a%nextprestigio %prestigio'
+
+#Configure as mensagens de rank/prestigio
+Mensagens:
+  Ranks:
+    - 'Lista de ranks'
+    - '&7[Zombie] - 15 Coins'
+    - '&7[Spider] - 15 Coins'
+    - '&7[Blaze] - 15 Coins'
+  
+  Prestigios:
+    - 'Lista de prestigios'
+    - 'Nivel 1 - 25% mais caro'
+    - 'Nivel 2 - 50% mais caro'
